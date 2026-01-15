@@ -1,0 +1,6 @@
+@ISwim_Academy_HostAddress = http://localhost:5081
+
+GET {{ISwim_Academy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
