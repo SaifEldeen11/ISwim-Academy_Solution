@@ -9,7 +9,7 @@ namespace Core.RepoInterfaces
 {
     public interface IGenaricRepository<TEntity> where TEntity : BaseEntity
     {
-        Task<TEntity> GetByIdAsync(int id);
+        Task<TEntity?> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> GetAllAsync();
 
         Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate);

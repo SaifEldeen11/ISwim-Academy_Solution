@@ -9,11 +9,7 @@ namespace Core.RepoInterfaces
 {
     public interface IUnitOfWork:IDisposable
     {
-        IGenaricRepository<Coach> Coaches { get; }
-        ISwimmerRepository Swimmers { get; }
-        IGenaricRepository<Team> Teams { get; }
-        IPerformanceRecordRepository PerformanceRecords { get; }
-        IGenaricRepository<PerformanceNote> PerformanceNotes { get; }
+        public IGenaricRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity;
 
         Task<int> SaveChangesAsync();
         Task BeginTransactionAsync();
