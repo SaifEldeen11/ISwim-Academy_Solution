@@ -8,7 +8,7 @@ namespace Core.Enums
 {
     public enum CoachLevel
     {
-        Regular = 1,
+        Junior = 1,
         Head = 2,
         Senior = 3,
     }

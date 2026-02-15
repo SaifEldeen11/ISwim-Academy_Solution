@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.RepoInterfaces
 {
-    public interface IPerformanceRecordRepository:IGenaricRepository<PerformanceRecord>
+    public interface IPerformanceRecordRepository: IGenericRepository<PerformanceRecord>
     {
         Task<IEnumerable<PerformanceRecord>> GetRecordsBySwimmerAsync(int swimmerId);
         Task<IEnumerable<PerformanceRecord>> GetRecordsBySwimmerAndDistanceAsync(int swimmerId, EventDistance distance);

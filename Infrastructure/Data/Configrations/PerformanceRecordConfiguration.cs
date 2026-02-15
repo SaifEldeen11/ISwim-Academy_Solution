@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data.Configrations
 {
-    internal class PerformanceRecordConfiguration : IEntityTypeConfiguration<PerformanceRecord>
+    public class PerformanceRecordConfiguration : IEntityTypeConfiguration<PerformanceRecord>
     {
         public void Configure(EntityTypeBuilder<PerformanceRecord> builder)
         {
@@ -28,6 +28,8 @@ namespace Infrastructure.Data.Configrations
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasIndex(e => new { e.SwimmerId, e.Distance, e.RecordedDate });
+
+            builder.ToTable("PerformanceRecords");
         }
     }
 }

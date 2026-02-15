@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISwim-Academy", "ISwim-Academy\ISwim-Academy.csproj", "{0348D23F-EF34-4B19-8B28-38ADB002855D}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{8B5AB060-903C-458B-9887-3250DC562104}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{3A75E5F1-76BF-42AA-9F6E-1DFE35884396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{5698AE9D-1B9D-400D-9A2F-7514FC3EFB43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3A75E5F1-76BF-42AA-9F6E-1DFE35884396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A75E5F1-76BF-42AA-9F6E-1DFE35884396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A75E5F1-76BF-42AA-9F6E-1DFE35884396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5698AE9D-1B9D-400D-9A2F-7514FC3EFB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5698AE9D-1B9D-400D-9A2F-7514FC3EFB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5698AE9D-1B9D-400D-9A2F-7514FC3EFB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5698AE9D-1B9D-400D-9A2F-7514FC3EFB43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

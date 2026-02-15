@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    public class PerformanceRecordRepository : GenaricRepository<PerformanceRecord>, IPerformanceRecordRepository
+    public class PerformanceRecordRepository : GenericRepository<PerformanceRecord>, IPerformanceRecordRepository
     {
         public PerformanceRecordRepository(ApplicationDbContext context):base(context)
         {

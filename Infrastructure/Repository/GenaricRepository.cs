@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    public class GenaricRepository<TEntity> : IGenaricRepository<TEntity> where TEntity : BaseEntity
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         private readonly ApplicationDbContext _context;
         protected readonly DbSet<TEntity> _dbSet;
 
-        public GenaricRepository(ApplicationDbContext context)
+        public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
             _dbSet = _context.Set<TEntity>();

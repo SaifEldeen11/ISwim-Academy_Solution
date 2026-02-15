@@ -18,30 +18,31 @@ namespace Infrastructure.Repository
         private readonly ApplicationDbContext _context;
         private IDbContextTransaction? _transaction;
 
+        private readonly IGenericRepository<Coach> _coaches;
+        private readonly ISwimmerRepository _swimmers;
+        private readonly IGenericRepository<Team> _teams;
+        private readonly IPerformanceRecordRepository _performanceRecords;
+        private readonly IGenericRepository<PerformanceNote> _performanceNotes;
+
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
+            _coaches = new GenericRepository<Coach>(_context);
+            _swimmers = new SwimmerRepository(_context);
+            _teams = new GenericRepository<Team>(_context);
+            _performanceRecords = new PerformanceRecordRepository(_context);
+            _performanceNotes = new GenericRepository<PerformanceNote>(_context);
         }
 
-        public IGenaricRepository<TEntity> GetRepository<TEntity>()where TEntity : BaseEntity
-        {
-            // check if the repository already exists
-            var TypeName = typeof(TEntity).Name;
-            if (_repositories.ContainsKey(TypeName))
-            {
-                return (IGenaricRepository<TEntity>)_repositories[TypeName];
-            }
+        public IGenericRepository<Coach> Coaches => _coaches;
 
-            // create repository and add it to the dictionary
+        public ISwimmerRepository Swimmers => _swimmers;
 
-            var repository = new GenaricRepository<TEntity>(_context);
+        public IGenericRepository<Team> Teams => _teams;
 
-            // store the repository in the dictionary
+        public IPerformanceRecordRepository PerformanceRecords => _performanceRecords;
 
-            _repositories[TypeName] = repository;
-
-            return repository;
-        }
+        public IGenericRepository<PerformanceNote> PerformanceNotes => _performanceNotes;
 
         public async Task BeginTransactionAsync()
         {

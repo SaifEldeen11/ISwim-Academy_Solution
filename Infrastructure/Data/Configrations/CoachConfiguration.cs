@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data.Configrations
 {
-    internal class CoachConfiguration : IEntityTypeConfiguration<Coach>
+    public class CoachConfiguration : IEntityTypeConfiguration<Coach>
     {
         public void Configure(EntityTypeBuilder<Coach> builder)
         {
@@ -19,6 +19,7 @@ namespace Infrastructure.Data.Configrations
             builder.Property(e => e.Email).IsRequired().HasMaxLength(200);
             builder.HasIndex(e => e.Email).IsUnique();
             builder.Property(e => e.Level).HasConversion<int>();
+            builder.ToTable("Coaches");
         }
     }
 }

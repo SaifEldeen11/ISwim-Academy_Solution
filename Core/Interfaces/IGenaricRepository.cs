@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.RepoInterfaces
 {
-    public interface IGenaricRepository<TEntity> where TEntity : BaseEntity
+    public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         Task<TEntity?> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> GetAllAsync();

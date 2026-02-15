@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.RepoInterfaces
 {
-    public interface ISwimmerRepository:IGenaricRepository<Swimmer>
+    public interface ISwimmerRepository: IGenericRepository<Swimmer>
     {
         Task<IEnumerable<Swimmer>> GetSwimmersByTeamAsync(int teamId);
         Task<IEnumerable<Swimmer>> GetSwimmersByReadinessAsync(CompetitionReadiness readiness);

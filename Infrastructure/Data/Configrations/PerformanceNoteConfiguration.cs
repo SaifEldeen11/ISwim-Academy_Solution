@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data.Configrations
 {
-    internal class PerformanceNoteConfiguration : IEntityTypeConfiguration<PerformanceNote>
+    public class PerformanceNoteConfiguration : IEntityTypeConfiguration<PerformanceNote>
     {
         public void Configure(EntityTypeBuilder<PerformanceNote> builder)
         {
@@ -25,6 +25,8 @@ namespace Infrastructure.Data.Configrations
                 .WithMany(c => c.PerformanceNotes)
                 .HasForeignKey(e => e.CoachId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.ToTable("PerformanceNotes");
         }
     }
 }

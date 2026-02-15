@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    public class SwimmerRepository :GenaricRepository<Swimmer>,ISwimmerRepository
+    public class SwimmerRepository : GenericRepository<Swimmer>,ISwimmerRepository
     {
         private readonly ApplicationDbContext _context;
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data.Configrations
 {
-    internal class TeamConfiguration : IEntityTypeConfiguration<Team>
+    public class TeamConfiguration : IEntityTypeConfiguration<Team>
     {
         public void Configure(EntityTypeBuilder<Team> builder)
         {
@@ -21,6 +21,8 @@ namespace Infrastructure.Data.Configrations
                 .WithMany(c => c.Teams)
                 .HasForeignKey(e => e.CoachId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.ToTable("Teams");
         }
     }
 }
